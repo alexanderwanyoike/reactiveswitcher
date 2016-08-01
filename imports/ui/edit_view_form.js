@@ -2,9 +2,9 @@ import './edit_view_form.html';
 import {Template} from 'meteor/templating';
 import {Meteor} from 'meteor/meteor';
 import {Session}  from 'meteor/session';
-import { ReactiveDict } from 'meteor/reactive-dict';
+import {ReactiveDict} from 'meteor/reactive-dict';
 
-Template.editViewForm.onCreated(function() {
+Template.editViewForm.onCreated(function () {
     this.errorDictionary = new ReactiveDict();
     this.errorDictionary.setDefault({
         error: false,
@@ -18,15 +18,13 @@ Template.editViewForm.events({
         const target = event.target;
         const name = target.name.value;
         const locationUrl = target.locationUrl.value;
-        const renderDuration = target.renderDuration.value;
         const instance = Template.instance();
         selectedView = Session.get('selectedView');
         if (selectedView) {
             Meteor.call('views.update', {
                 viewId: selectedView._id,
                 newName: name,
-                newLocationUrl: locationUrl,
-                newRenderDuration: Number(renderDuration)
+                newLocationUrl: locationUrl
             }, (err, res) => {
                 if (err) {
                     instance.errorDictionary.set('error', true);
@@ -40,8 +38,7 @@ Template.editViewForm.events({
         } else {
             Meteor.call('views.insert', {
                 name: name,
-                locationUrl: locationUrl,
-                renderDuration: Number(renderDuration)
+                locationUrl: locationUrl
             }, (err, res) => {
                 if (err) {
                     instance.errorDictionary.set('error', true);
@@ -49,7 +46,6 @@ Template.editViewForm.events({
                 }
                 target.name.value = '';
                 target.locationUrl.value = '';
-                target.renderDuration.value = '';
             });
         }
 
@@ -68,7 +64,7 @@ Template.editViewForm.helpers({
     selectedView: function () {
         return Session.get('selectedView');
     },
-    error: function  () {
+    error: function () {
         const instance = Template.instance();
         return instance.errorDictionary.get('error');
     },

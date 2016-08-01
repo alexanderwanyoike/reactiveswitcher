@@ -1,9 +1,7 @@
 <template name="switcher">
-    {{#each view in views}}
-    <div id="content">
-        <iframe class="viewFrame" src="{{view.locationUrl}}" frameborder="0"></iframe>
+    <div id="switcherContent">
+        {{#each view in views}}
+        <iframe id="view-{{@index}}" class="switcherView " duration ="{{view.renderDuration}}" width="100%" height="100%" src="{{view.locationUrl}}" frameborder="0"></iframe>
+        {{/each}}
     </div>
-    {{/each}}
-
-
 </template>

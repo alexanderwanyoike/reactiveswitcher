@@ -20,15 +20,10 @@
                                placeholder="Location Url" value="{{selectedView.locationUrl}}">
                     </div>
 
-                    <div class="form-group">
-                        <label for="locationUrl">Render Duration</label>
-                        <input type="number" class="form-control" id="renderDuration" name="renderDuration"
-                               placeholder="Render Duration (Minutes)" value="{{selectedView.renderDuration}}">
-                    </div>
                     <div class="btn-group pull-right" role="group">
-                        <button type="submit" class="btn btn-default">Save</button>
+                        <button type="submit" class="btn btn-default"><i class="fa fa-floppy-o" aria-hidden="true"></i>&nbsp;Save</button>
                         {{#if selectedView}}
-                        <button type="button" id="deleteView" class="btn btn-error">Delete</button>
+                        <button type="button" id="deleteView" class="btn btn-error"><i class="fa fa-times-circle-o" aria-hidden="true"></i>&nbsp;Delete</button>
                         {{/if}}
                     </div>
 
