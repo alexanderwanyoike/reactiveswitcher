@@ -1,0 +1,11 @@
+{
+  "name": "switcher",
+  "private": true,
+  "scripts": {
+    "start": "meteor run"
+  },
+  "dependencies": {
+    "meteor-node-stubs": "~0.2.0",
+    "phantomjs": "^2.1.7"
+  }
+}

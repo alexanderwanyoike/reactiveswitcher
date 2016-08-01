@@ -1,0 +1,41 @@
+<template name="editViewForm">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-center">
+                {{#if error}}
+                <div class="alert alert-danger" role="alert">{{errorMessage}}</div>
+                {{/if}}
+
+                <form class="new-view">
+                    <div class="form-group">
+                        <label for="name">View Name</label>
+                        <input type="text" class="form-control" id="name" name="name"
+                               placeholder="Name" value="{{selectedView.name}}">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="locationUrl">Location Url</label>
+                        <input type="text" class="form-control" id="locationUrl" name="locationUrl"
+                               placeholder="Location Url" value="{{selectedView.locationUrl}}">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="locationUrl">Render Duration</label>
+                        <input type="number" class="form-control" id="renderDuration" name="renderDuration"
+                               placeholder="Render Duration (Minutes)" value="{{selectedView.renderDuration}}">
+                    </div>
+                    <div class="btn-group pull-right" role="group">
+                        <button type="submit" class="btn btn-default">Save</button>
+                        {{#if selectedView}}
+                        <button type="button" id="deleteView" class="btn btn-error">Delete</button>
+                        {{/if}}
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+</template>
