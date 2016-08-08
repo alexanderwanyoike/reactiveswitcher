@@ -2,10 +2,26 @@
   "name": "switcher",
   "private": true,
   "scripts": {
-    "start": "meteor run"
+    "start": "babel-node --presets=es2015 index.js"
   },
   "dependencies": {
-    "meteor-node-stubs": "~0.2.0",
-    "phantomjs": "^2.1.7"
-  }
+    "babel-cli": "^6.0.0",
+    "babel-preset-es2015": "^6.0.0",
+    "compression": "^1.6.2",
+    "express": "^4.14.0"
+  },
+  "description": "A Reactive Site Switcher",
+  "version": "0.1.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexanderwanyoike/reactiveswitcher.git"
+  },
+  "author": "Alexander Wanyoike",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexanderwanyoike/reactiveswitcher/issues"
+  },
+  "homepage": "https://github.com/alexanderwanyoike/reactiveswitcher#readme"
 }
