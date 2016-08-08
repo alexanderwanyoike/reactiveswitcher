@@ -1,16 +1,19 @@
-# Reactive Switcher
-A Reactive Site Switcher
+# Simple Switcher
+A Simple Site Switcher
 
-Simple project that allows uses to carousel through local websites.
+Simple site switcher that uses an  iframe to switch through a list of sites defined in a `settings.json` file.
 
-##Installation
+##Usage
+1. Clone the project `git clone https://github.com/alexanderwanyoike/simpleswitcher.git`
+2. Create a `setting.json` file that has the required configurations for the switcher. The file should look similar to this:
+```
+{
+  "renderDuration": 30000,
+  "views" : ["http://127.0.0.1:8282", "http://127.0.0.1:4892"] 
+}
+```
+* **views** : Specifies the urls of the sites that you want to switch though.
+* **renderDuration** : How long the each site will be rendered.
 
-###Prerequists 
-Please install meteor using the following command. 
-`curl https://install.meteor.com/ | sh`
 
-###Installation
-1. `cd` into the switcher directory. 
-2. call `meteor run --settings private/settings.json` to start the switcher if you have custom configurations please use `meteor run --settings <file location>`.
-3. You can access the dashboard by navigating to http://localhost:3000/dashboard
 
