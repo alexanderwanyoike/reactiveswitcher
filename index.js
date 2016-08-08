@@ -8,7 +8,7 @@ const PORT = 6483;
 App.use(compression());
 App.use(Express.static('app'));
 App.get('/views', (req, res) => {
-    fs.readFile(__dirname + '/settings.json', 'utf8', (err, data) => {
+    fs.readFile(__dirname + '/../settings.json', 'utf8', (err, data) => {
         if (err) {
             console.log("Please define a settings json file before starting the server");
         }
