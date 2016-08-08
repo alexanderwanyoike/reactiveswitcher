@@ -1,7 +1,0 @@
-<template name="switcher">
-    <div id="switcherContent">
-        {{#each view in views}}
-        <iframe id="view-{{@index}}" class="switcherView " duration ="{{view.renderDuration}}" width="100%" height="100%" src="{{view.locationUrl}}" frameborder="0"></iframe>
-        {{/each}}
-    </div>
-</template>
