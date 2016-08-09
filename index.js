@@ -6,8 +6,8 @@ const App = Express();
 const PORT = 6483;
 
 App.use(compression());
-App.use('js', Express.static(path.join(__dirname + '/app/js')));
-App.use('css', Express.static(path.join(__dirname + '/app/css')));
+App.use('/js', Express.static(path.join(__dirname + '/app/js')));
+App.use('/css', Express.static(path.join(__dirname + '/app/css')));
 App.get('/views', (req, res) => {
     fs.readFile(__dirname + '/../settings.json', 'utf8', (err, data) => {
         if (err) {
