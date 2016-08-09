@@ -22,7 +22,7 @@ var App = (0, _express2.default)();
 var PORT = 6483;
 
 App.use((0, _compression2.default)());
-App.use(_express2.default.static('build'));
+App.use(_express2.default.static('app'));
 App.get('/views', function (req, res) {
     _fs2.default.readFile(__dirname + '/../settings.json', 'utf8', function (err, data) {
         if (err) {
