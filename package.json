@@ -4,7 +4,7 @@
   "scripts": {
     "start": "node ./build/index.js",
     "clean": "rm -rf build && mkdir build",
-    "build:server": "babel -d ./build index.js && cp -R app settings.json build",
+    "build:server": "babel -d ./build index.js && cp -R app build",
     "build": "npm run clean && npm run build:server"
   },
   "dependencies": {
