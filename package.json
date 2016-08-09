@@ -4,8 +4,8 @@
   "scripts": {
     "start": "node ./build/index.js",
     "clean": "rm -rf build && mkdir build",
-    "build-server": "babel -d ./build index.js && cp -R app settings.json build",
-    "build": "npm run clean && npm run build-server"
+    "build:server": "babel -d ./build index.js && cp -R app settings.json build",
+    "build": "npm run clean && npm run build:server"
   },
   "dependencies": {
     "babel-cli": "^6.11.4",
