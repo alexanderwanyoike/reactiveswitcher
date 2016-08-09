@@ -1,4 +1,4 @@
-$('body').ready(function () {
+$(document).ready(function () {
     $.get("views", function (settings) {
         currentIndex = 0;
         console.log(settings["views"]);
