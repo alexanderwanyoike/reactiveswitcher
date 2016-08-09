@@ -1,4 +1,4 @@
 {
   "renderDuration": 30000,
-  "views" : ["http://127.0.0.1:8282", "http://127.0.0.1:8989"]
+  "views" : ["http://raspberry3.local:8283/app", "http://raspberry3.local:8989"]
 }
